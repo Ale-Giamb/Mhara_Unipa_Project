@@ -1,16 +1,19 @@
 # MHARA Robot System - Guida Completa
 
-Questa guida contiene tutti i comandi necessari per avviare e gestire il sistema robotico MHARA dell'Università di Palermo.
-In questo progetto sono utlizzati i robot Pepper e GO2.
+Questa guida è stata realizzata per il RoboticsLab dell'Università di Palermo.
+In tutta la guida si farà riferimento a file e percorsi presenti all'interno del laboratorio, ciononostante non è difficile riadattarlo al proprio contesto.
+Essa contiene tutti i comandi necessari per avviare e gestire il sistema robotico MHARA 
+In questo progetto sono utilizzati i robot Pepper e GO2.
 Lo scopo di pepper è quello di suggerire ricette o attività sulla base delle informazioni ottenute in fase di registrazione.
 Lo scopo di GO2 è quello di monitorare l'ambiente e suggerire dei consigli relativi a postura, sedentarietà ...
 
-**Nota**: Per una migliore comprensione del parlato si è scelto di utlizzare il microfono del pc, rispetto a quello di Pepper.   Per attivare o disattivare l'ascolto si deve premere ctrl dentro una qualsiasi pagina web.
+**Nota**: 
+Per una migliore comprensione del parlato si è scelto di utlizzare il microfono del pc, rispetto a quello di Pepper.  
+Per attivare o disattivare l'ascolto si deve premere ctrl dentro una qualsiasi pagina web.
 	  Resta comunque possibile utilizzare il microfono di Pepper mediantela la funzione record di UnipaQi speech.
-	  Per avviare uno dei test bdi scommentare dentro src/bdi_agents/bdi_agents.mas2j prima dell'uso
-	  uno tra nutrizione o statocognitivo.
+	  Per avviare uno dei test bdi levare il commento  di riferimento all'interno a src/bdi_agents/bdi_agents.mas2j prima dell'uso.
 	  IMPORTANTE: Qualora si effettuano modifiche al codice che riguardino la parte di architettura ros2, dopo aver salvato i file
-	  è necessario effettuare il comando "colcon build" da terminale nel percorso ~/Scrivania/mhara_env/MHARA_Unipa 
+	  è necessario effettuare il comando "colcon build" da terminale nel percorso opportuno
 	  questo permette di rendere le modifiche effettive.
 	
 ---
@@ -30,7 +33,7 @@ Lo scopo di GO2 è quello di monitorare l'ambiente e suggerire dei consigli rela
 ---
 
 ## Prerequisiti
-
+Assicurarsi si aver letto il file Codice Documentazione per avere chiarezza dell'intera composizione del codice e solo successivamente passare alla guida sottostante.
 Prima di iniziare, assicurarsi di:
 
 - Avere il percorso corretto configurato nel file `~/.bashrc`
@@ -41,13 +44,14 @@ Prima di iniziare, assicurarsi di:
 
 ## Avvio Database Neo4j
 
-Il database a grafo Neo4j deve essere avviato dalla scrivania.
+Il database a grafo Neo4j deve essere avviato.
 
+Esempio:
 ```bash
-cd ~/Scrivania
 ./neo4j-desktop-1.6.1-x86_64.AppImage
 ```
-Successivamente avviare grafo mhara
+Importare il database mhara e
+successivamente avviare grafo mhara 
 
 **Nota**: Attendere il completo avvio dell'interfaccia grafica prima di procedere con i passi successivi.
 
