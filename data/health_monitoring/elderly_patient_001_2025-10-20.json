@@ -1,0 +1,43 @@
+[
+  {
+    "timestamp": "2025-10-20T12:51:16.046058",
+    "user_id": "elderly_patient_001",
+    "context": "Controllo periodico automatico - 12:51",
+    "provider": "google",
+    "postura": "Le persone sono sedute, ma non è possibile valutare la postura con precisione.",
+    "mobilita": "Le persone sono sedute, quindi la mobilità non è valutabile.",
+    "sedentarieta": "Le persone sono sedute alle scrivanie, il che suggerisce un comportamento sedentario.",
+    "ambiente": "L'ambiente sembra essere un ufficio o un'area di lavoro, senza chiari rischi di caduta visibili.",
+    "stato_emotivo": "Non è possibile valutare lo stato emotivo dalle immagini.",
+    "segni_rischio": "",
+    "analisi_completa": "L'immagine non mostra chiaramente una persona anziana. Si vedono due persone che sembrano essere più giovani sedute a delle scrivanie, probabilmente in un ufficio o in un'area di lavoro.\n\nPOSTURA: Le persone sono sedute, ma non è possibile valutare la postura con precisione.\nMOBILITÀ: Le persone sono sedute, quindi la mobilità non è valutabile.\nSEDENTARIETÀ: Le persone sono sedute alle scrivanie, il che suggerisce un comportamento sedentario.\nAMBIENTE: L'ambiente sembra essere un ufficio o un'area di lavoro, senza chiari rischi di caduta visibili.\nSTATO EMOTIVO: Non è possibile valutare lo stato emotivo dalle immagini.\nSEGNI DI RISCHIO: Nessun segno di rischio specifico è rilevabile dall'immagine, ma è importante incoraggiare pause e movimento per ridurre la sedentarietà.",
+    "segni_di_rischio": "Nessun segno di rischio specifico è rilevabile dall'immagine, ma è importante incoraggiare pause e movimento per ridurre la sedentarietà."
+  },
+  {
+    "timestamp": "2025-10-20T12:52:09.387645",
+    "user_id": "elderly_patient_001",
+    "context": "Controllo periodico automatico - 12:52",
+    "provider": "google",
+    "postura": "",
+    "mobilita": "",
+    "sedentarieta": "",
+    "ambiente": "",
+    "stato_emotivo": "",
+    "segni_rischio": "",
+    "analisi_completa": "L'immagine non mostra chiaramente una persona anziana. Invece, si vedono due persone che sembrano essere più giovani, sedute a delle scrivanie. Pertanto, non posso fornire un'analisi basata sui criteri specificati per la salute di una persona anziana."
+  },
+  {
+    "timestamp": "2025-10-20T12:52:50.604374",
+    "user_id": "elderly_patient_001",
+    "context": "Controllo periodico automatico - 12:52",
+    "provider": "google",
+    "postura": "La persona è seduta con una postura apparentemente corretta, il collo è in posizione naturale.",
+    "mobilita": "La persona è seduta, quindi la mobilità non è direttamente osservabile.",
+    "sedentarieta": "La persona è seduta alla scrivania, suggerendo una possibile attività sedentaria.",
+    "ambiente": "L'ambiente sembra ordinato e ben illuminato, senza rischi evidenti.",
+    "stato_emotivo": "La persona sembra tranquilla e serena.",
+    "segni_rischio": "",
+    "analisi_completa": "Dato che l'immagine mostra una persona giovane e non una persona anziana, l'analisi si baserà su un'interpretazione generale del benessere:\n\nPOSTURA: La persona è seduta con una postura apparentemente corretta, il collo è in posizione naturale.\nMOBILITÀ: La persona è seduta, quindi la mobilità non è direttamente osservabile.\nSEDENTARIETÀ: La persona è seduta alla scrivania, suggerendo una possibile attività sedentaria.\nAMBIENTE: L'ambiente sembra ordinato e ben illuminato, senza rischi evidenti.\nSTATO EMOTIVO: La persona sembra tranquilla e serena.\nSEGNI DI RISCHIO: Nessun segno di rischio specifico rilevato, ma è importante incoraggiare pause e movimento per evitare una sedentarietà prolungata.",
+    "segni_di_rischio": "Nessun segno di rischio specifico rilevato, ma è importante incoraggiare pause e movimento per evitare una sedentarietà prolungata."
+  }
+]

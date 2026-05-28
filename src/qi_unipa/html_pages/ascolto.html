@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pepper - In Ascolto</title>
+<style>
+    /* ------------------------------------ */
+    /* STILI GLOBALI E SFONDO               */
+    /* ------------------------------------ */
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Sfondo verde-azzurro per comunicare "ascolto attivo" */
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Onde sonore animate sullo sfondo */
+    body::before,
+    body::after {
+        content: '';
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        animation: soundWave 3s infinite ease-out;
+        pointer-events: none;
+    }
+
+    body::after {
+        animation-delay: 1.5s;
+        width: 500px;
+        height: 500px;
+    }
+
+    @keyframes soundWave {
+        0% { 
+            transform: scale(0.8); 
+            opacity: 0.8; 
+        }
+        100% { 
+            transform: scale(2); 
+            opacity: 0; 
+        }
+    }
+
+    /* ------------------------------------ */
+    /* TITOLO E TESTO                       */
+    /* ------------------------------------ */
+    h1 {
+        font-size: 2.8em;
+        color: #ffffff;
+        text-align: center;
+        margin: 40px 0 0 0;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 8px rgba(0, 0, 0, 0.9);
+        letter-spacing: 3px;
+        animation: pulseListening 2s infinite alternate;
+        z-index: 1;
+    }
+    
+    .subtitle {
+        font-size: 1.3em;
+        color: #e0e0e0;
+        margin-top: 15px;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+        z-index: 1;
+        animation: fadeInOut 2s infinite alternate;
+    }
+
+    @keyframes pulseListening {
+        0% { opacity: 1; transform: scale(1); }
+        100% { opacity: 0.85; transform: scale(1.03); }
+    }
+
+    @keyframes fadeInOut {
+        0% { opacity: 0.7; }
+        100% { opacity: 1; }
+    }
+
+    /* ------------------------------------ */
+    /* TESTA DI PEPPER IN ASCOLTO           */
+    /* ------------------------------------ */
+    .pepper-head {
+        width: 220px;
+        height: 220px;
+        background: #f0f0f0;
+        border-radius: 50%;
+        position: relative;
+        border: 8px solid #667eea;
+        box-shadow: 0 0 50px rgba(102, 126, 234, 0.9), 0 0 20px #ffffff inset;
+        animation: listeningPulse 2s infinite ease-in-out;
+        z-index: 1;
+    }
+
+    @keyframes listeningPulse {
+        0%, 100% { 
+            transform: scale(1);
+            box-shadow: 0 0 50px rgba(102, 126, 234, 0.7), 0 0 20px #ffffff inset;
+        }
+        50% { 
+            transform: scale(1.05);
+            box-shadow: 0 0 70px rgba(102, 126, 234, 1), 0 0 30px #ffffff inset;
+        }
+    }
+
+    /* Occhi di Pepper - attenti e concentrati */
+    .eye-pair {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        position: absolute;
+        top: 75px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .eye {
+        width: 32px;
+        height: 32px;
+        background: #00d4aa; /* Verde acqua per "ascolto attivo" */
+        border-radius: 50%;
+        border: 3px solid #00a87e;
+        box-shadow: 0 0 15px rgba(0, 212, 170, 0.9);
+        animation: eyeFocus 3s infinite ease-in-out;
+    }
+    
+    .eye:nth-child(2) {
+        animation-delay: 0.15s;
+    }
+
+    @keyframes eyeFocus {
+        0%, 100% { 
+            transform: scale(1);
+            box-shadow: 0 0 15px rgba(0, 212, 170, 0.9);
+        }
+        50% { 
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(0, 212, 170, 1);
+        }
+    }
+
+    /* Indicatore sonoro (onde vicino all'orecchio) */
+    .sound-indicator {
+        position: absolute;
+        top: 50%;
+        right: -60px;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .sound-bar {
+        width: 6px;
+        background: #00d4aa;
+        border-radius: 3px;
+        box-shadow: 0 0 10px rgba(0, 212, 170, 0.7);
+    }
+
+    .sound-bar:nth-child(1) {
+        height: 15px;
+        animation: soundBars 0.8s infinite ease-in-out;
+    }
+
+    .sound-bar:nth-child(2) {
+        height: 25px;
+        animation: soundBars 0.8s infinite ease-in-out 0.1s;
+    }
+
+    .sound-bar:nth-child(3) {
+        height: 35px;
+        animation: soundBars 0.8s infinite ease-in-out 0.2s;
+    }
+
+    .sound-bar:nth-child(4) {
+        height: 25px;
+        animation: soundBars 0.8s infinite ease-in-out 0.3s;
+    }
+
+    .sound-bar:nth-child(5) {
+        height: 15px;
+        animation: soundBars 0.8s infinite ease-in-out 0.4s;
+    }
+
+    @keyframes soundBars {
+        0%, 100% { transform: scaleY(0.5); opacity: 0.5; }
+        50% { transform: scaleY(1); opacity: 1; }
+    }
+
+    /* Stessa cosa sul lato sinistro */
+    .sound-indicator-left {
+        position: absolute;
+        top: 50%;
+        left: -60px;
+        transform: translateY(-50%);
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    /* Bocca in posizione neutra/attenta */
+    .mouth {
+        position: absolute;
+        bottom: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 25px;
+        background: #6c63ff;
+        border-radius: 0 0 60px 60px;
+        box-shadow: 0 5px 15px rgba(108, 99, 255, 0.5);
+        animation: mouthListening 4s infinite ease-in-out;
+    }
+
+    @keyframes mouthListening {
+        0%, 100% { transform: translateX(-50%) scaleY(1); }
+        50% { transform: translateX(-50%) scaleY(0.9); }
+    }
+
+    /* Antenna con luce pulsante */
+    .antenna {
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 30px;
+        background: #00a87e;
+        border-radius: 5px 5px 0 0;
+        box-shadow: 0 -5px 15px rgba(0, 212, 170, 0.9);
+        animation: antennaPulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes antennaPulse {
+        0%, 100% { box-shadow: 0 -5px 15px rgba(0, 212, 170, 0.9); }
+        50% { box-shadow: 0 -5px 30px rgba(0, 212, 170, 1), 0 0 20px rgba(0, 212, 170, 0.5); }
+    }
+
+    /* Icona microfono sotto */
+    .microphone-icon {
+        margin-top: 30px;
+        font-size: 3em;
+        color: #ffffff;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        animation: micPulse 2s infinite ease-in-out;
+        z-index: 1;
+    }
+
+    @keyframes micPulse {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.1); opacity: 1; }
+    }
+</style>
+</head>
+<body>
+    <div class="pepper-head">
+        <div class="antenna"></div>
+        <div class="eye-pair">
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+        
+        <!-- Indicatori sonori ai lati -->
+        <div class="sound-indicator-left">
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+        </div>
+        
+        <div class="sound-indicator">
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+            <div class="sound-bar"></div>
+        </div>
+        
+        <div class="mouth"></div>
+    </div>
+    
+    <h1>In Ascolto</h1>
+    <p class="subtitle">Ti sto ascoltando... parla pure</p>
+    
+    <div class="microphone-icon">🎤</div>
+</body>
+</html>
